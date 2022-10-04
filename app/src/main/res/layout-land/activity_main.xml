@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Product"
+            type="com.example.exa_final.Product" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eq_recycler"
+            android:layout_width="313dp"
+            android:layout_height="335dp"
+            tools:ignore="MissingConstraints"
+            tools:itemCount="5"
+            tools:listitem="@layout/adapaterventana" />
+
+        <TextView
+            android:id="@+id/empy_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Error al consultar DATOS"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/jlb_tit2"
+            android:layout_width="288dp"
+            android:layout_height="59dp"
+
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:text="Producto"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.781"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/jlb_mag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="444dp"
+            android:layout_marginTop="104dp"
+            android:padding="10dp"
+            android:text="@{String.valueOf(Product.price)}"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:text="58.61" />
+
+        <TextView
+            android:id="@+id/jlb_rit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="176dp"
+            android:text="Cornichos"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="176dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jlb_tit2"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
